@@ -1,13 +1,21 @@
 # TechSwitch's Docker | DevSecOps
 
-[Architecture Documentation](Documents/Architecture.md)
-[Components](Documents/Components.md)
+## [Architecture Documentation](Documents/Architecture.md)
+## [Components](Documents/Components.md)
 
 
 ### Commands
 
-- `docker --version`                                            # prints docker version
-- `docker build .`                                             #  builds image from dockerfile
+## print docker version
+```
+docker --version
+```
+
+##  build image from dockerfile
+```
+docker build -t name .
+```
+
 - `docker pull imagename`   # Pulls image from docker hub​
 - `docker run​ imagename`                                           #  downloads and runs container
 - `docker login -u username --password-stdin`                                            #   login to docker hub from cli
@@ -20,13 +28,15 @@
 - `docker container run -d --name mynginx -p 8080:80 nginx`         # expose an nginx container with 8080 port
 - `docker logs -f ubuntu-container`                                # print logs of the container
 - `docker exec containerid /bin/bash`                                 #  shell of the container in interactive mode
+- `docker run -d --name httpd  --mount source=test1,target=/tmp/fs httpd` # bind mount using --mount flag
+- `docker run -d --name nginx2 -v test1:/tmp2/fs nginx`   # attach volume using -v/--volume flag
+- `docker info`                     # shows information of everything, look out for storage drivers
 
 
 
 
  
-> cd /usr/share/nginx/html 
->> sed -i  's/nginx/techswitch/g' index.html
+>>docker exec -it nginx /bin/bash -- sed -i  's/nginx/techswitch/g' /usr/share/nginx/html/index.html
 
 
 Other Public registries
