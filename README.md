@@ -2,6 +2,7 @@
 
 ## [Architecture Documentation](Documents/Architecture.md)
 ## [Components](Documents/Components.md)
+## [Storage/others](Documents/Others.md)
 
 
 
