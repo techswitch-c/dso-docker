@@ -1,10 +1,12 @@
-# TechSwitch's Docker | DevSecOps
+# TechSwitch's Docker | DevSecOps 💻
 
 ## [Architecture Documentation](Documents/Architecture.md)
 ## [Components](Documents/Components.md)
 
 
-### Commands
+
+
+### Important Commands 📋
 
 ## print docker version
 ```
@@ -53,14 +55,16 @@ docker build -t name .
 
 
 
+### Official Documentation for Commands reference
 
+[![Read the Docs](https://img.shields.io/badge/Read%20the%20Docs-8CA1AF?logo=readthedocs&logoColor=fff)](https://docs.docker.com/reference/cli/docker/)
 
 
  
 >>docker exec -it nginx /bin/bash -- sed -i  's/nginx/techswitch/g' /usr/share/nginx/html/index.html
 
 
-Other Public registries
+Other Public registries 🫙
 
 [Docker Hub](https://hub.docker.com/)
 
