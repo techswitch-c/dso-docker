@@ -1,0 +1,19 @@
+version: "3.9"  # Specify the Compose file version
+
+services:
+  # Define your services here
+  # Example:
+  web:
+    image: nginx:latest
+    build: .  # Build the image from the current directory
+    ports:
+      - "8000:80"  # Map container port 80 to host port 8000
+    volumes:
+      - ./app:/var/www/html  # Mount your app directory into the container
+    environment:
+      - DATABASE_URL=db:3306  # Set environment variables
+
+  db:
+    image: mysql:8.0  # Use the official MySQL image
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysecretpassword  # Set environment variables

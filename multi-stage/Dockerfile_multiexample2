@@ -1,0 +1,12 @@
+FROM ubuntu AS os
+RUN echo "os"
+
+
+FROM os AS step1
+RUN echo "firststep"
+
+
+FROM os AS step2
+RUN echo "secondstep"
+
+CMD ["sh", "-c", "sleep infinity"]
